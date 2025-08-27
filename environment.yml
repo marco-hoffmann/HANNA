@@ -1,0 +1,15 @@
+name: HANNA_environment
+channels:
+  - conda-forge
+  - pytorch
+dependencies:
+  - python=3.10
+  - pytorch
+  - numpy
+  - pandas
+  - rdkit
+  - transformers
+  - tokenizers
+  - ipykernel
+  - ipywidgets
+  - scikit-learn
