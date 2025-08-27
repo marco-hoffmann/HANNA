@@ -50,7 +50,7 @@ To set up the project, follow these steps:
 
 ## Usage
 
-You can use the `demo.ipynb` notebook, which provides a demonstration of how to calculate excess Gibbs energies andactivity coefficients for a multi-component mixtures.
+You can use the `demo.ipynb` notebook, which provides a demonstration of how to calculate excess Gibbs energies and activity coefficients for a multi-component mixtures.
 
 ## License
 
