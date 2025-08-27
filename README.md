@@ -10,7 +10,7 @@
   <img src="img/github_HANNA.png" alt="HANNA Overview" width="800"/>
 </p>
 
-HANNA is a machine learning model for predicting the excess Gibbs energy of the liquid phase in mixtures with an arbitrary number of components. Through automatic differentiation, HANNA derives thermodynamically consistent activity coefficients from the excess Gibbs energy. HANNA is trained to more than 300,000 binary experimental data points of vapor-liquid equilibria, infinite dilution activity coefficients and liquid-liquid equilibria. As input, only the SMILES notation and the considered state point is required. In comprehensive benchmarks, HANNA was found to yield better results than the state-of-the-art models of the UNIFAC family.
+HANNA is a machine learning model for predicting the excess Gibbs energy of the liquid phase in mixtures with an arbitrary number of components. Through automatic differentiation, HANNA derives thermodynamically consistent activity coefficients from the excess Gibbs energy. HANNA is trained to more than 300,000 binary experimental data points of vapor-liquid equilibria, infinite dilution activity coefficients and liquid-liquid equilibria. As input, only the SMILES notation and the considered state point (composition and temperature) is required. In comprehensive benchmarks, HANNA was found to yield better results than the state-of-the-art models of the UNIFAC family.
 
 **Note**: This repository is based on the HANNA prototype implementation by [tspecht93](https://github.com/tspecht93/HANNA), which was restricted to binary mixtures and not trained on liquid-liquid equilibrium data; the corresponding original paper is available [here](https://pubs.rsc.org/en/Content/ArticleLanding/2024/SC/D4SC05115G).
 
