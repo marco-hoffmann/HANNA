@@ -38,22 +38,14 @@ To set up the project, follow these steps:
 
    Use the provided `.yml` file to create the conda environment.
 
-   For Windows:
-
    ```bash
-   conda env create -f HANNA.yml
-   ```
-
-   For Linux:
-
-      ```bash
-   conda env create -f HANNA_Linux.yml
+   conda env create -f environment.yml
    ```
 
 4. **Activate the environment:**
 
    ```bash
-   conda activate HANNA
+   conda activate HANNA_environment
    ```
 
 ## Usage
