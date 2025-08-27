@@ -1,1 +1,2 @@
-/_pycache_/
+# Ignore all pycache folders recursively
+**/pycache/
