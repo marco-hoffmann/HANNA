@@ -42,15 +42,9 @@ To set up the project, follow these steps:
    conda env create -f environment.yml
    ```
 
-4. **Activate the environment:**
-
-   ```bash
-   conda activate HANNA_environment
-   ```
-
 5. **Test the installation:**
 
-   Open the `demo.ipynb` notebook and run the cells to test the installation.
+   Open the `demo.ipynb` notebook and run the cells using the HANNA environment to test the installation.
 
 
 ## License
