@@ -23,7 +23,7 @@ You can explore HANNA and other models from our working group on our interactive
   </a>
 </p>
 
-## Installation
+## Installing and using HANNA
 
 To set up the project, follow these steps:
 
@@ -48,9 +48,10 @@ To set up the project, follow these steps:
    conda activate HANNA_environment
    ```
 
-## Usage
+5. **Test the installation:**
 
-You can use the `demo.ipynb` notebook, which provides a demonstration of how to calculate excess Gibbs energies and activity coefficients for a multi-component mixtures.
+   Open the `demo.ipynb` notebook and run the cells to test the installation.
+
 
 ## License
 
