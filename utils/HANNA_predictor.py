@@ -1,6 +1,3 @@
-
-"""HANNA Predictor module for liquid-liquid equilibrium predictions."""
-
 import torch
 import numpy as np
 import pandas as pd
@@ -27,10 +24,9 @@ TEMPERATURE_SCALER_PATH = 'utils/scalers/temperature_scaler.pkl'
 BERT_SCALER_PATH = 'utils/scalers/bert_scaler.pkl'
 
 class HANNA_Predictor:
-    """HANNA predictor for liquid-liquid equilibrium predictions.
-    
+    """
     This class provides an interface for predicting activity coefficients
-    and excess Gibbs energy using the HANNA ensemble model.
+    and excess Gibbs energies using the HANNA model.
     """
     
     def __init__(self, ensemble_path: str = DEFAULT_ENSEMBLE_PATH) -> None:
@@ -107,7 +103,8 @@ class HANNA_Predictor:
         self, 
         smiles_list: List[str], 
         molar_fractions_all: Union[List[List[float]], np.ndarray], 
-        temperature: float
+        temperature: float,
+        verbose: bool = False
     ) -> tuple[np.ndarray, np.ndarray]:
         """Predict activity coefficients and excess Gibbs energy.
         
@@ -154,4 +151,21 @@ class HANNA_Predictor:
         # Make prediction
         ln_gammas, gE = self.model(temperature_tensor, x_values_tensor, embedding_tensor)
 
-        return ln_gammas.detach().cpu().numpy(), gE.detach().cpu().numpy()
+        ln_gammas = ln_gammas.detach().cpu().numpy()
+        gE = gE.detach().cpu().numpy()
+
+        if verbose:
+            print('\n' + '#'*60)
+            print("Predictions for system", "-".join(smiles_list))
+            print("Temperature:", f"{temperature} K")
+
+            for i, molar_fraction in enumerate(molar_fractions_all):
+                print(f"\nComposition {i+1} :", molar_fraction)
+                print(f"\tLogarithmic activity coefficients:")
+                for smiles, ln_gamma in zip(smiles_list, ln_gammas[i]):
+                    print(f"\t\t{smiles}: {ln_gamma:.2f}")
+                print(f"\n\tExcess Gibbs energy:")
+                print(f"\t\tg^E/RT = {gE[i]:.2f}")
+            print('#'*60 + '\n')
+
+        return ln_gammas, gE
