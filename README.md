@@ -1,6 +1,6 @@
 
 # HANNA
-[![Pre-Print](https://img.shields.io/badge/Paper-Available-brightgreen)](https://arxiv.org/abs/2509.06484)
+[![Pre-Print](https://img.shields.io/badge/Paper-Available-brightgreen)](https://www.nature.com/articles/s41467-026-71430-y)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Website MLPROP](https://img.shields.io/badge/Website-MLPROP-darkred?logo=https://ml-prop.mv.rptu.de/img/Logo.png&labelColor=4f4f4f)](https://ml-prop.mv.rptu.de/)
 
